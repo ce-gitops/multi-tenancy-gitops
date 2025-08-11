@@ -27,7 +27,7 @@ spec:
                 displayName: IBMCS Operators
                 publisher: IBM
                 sourceType: grpc
-                image: icr.io/cpopen/ibm-common-service-catalog:latest
+                image: icr.io/cpopen/ibm-common-service-catalog@sha256:4d745bf5a8d6cf10f0fbd702ea5f5f37d75e9fe4026bc2215515c4db0400f570
                 updateStrategy:
                   registryPoll:
                     interval: 45m
@@ -42,42 +42,8 @@ spec:
                 updateStrategy:
                   registryPoll:
                     interval: 45m
-
-            automationfoundation:
-              name: iaf-core-operators
-              catalog:
-                displayName: IAF Core Operators
-                publisher: IBM
-                sourceType: grpc
-                image: icr.io/cpopen/ibm-automation-foundation-core-catalog
-                updateStrategy:
-                  registryPoll:
-                    interval: 45m
-
-            processmining:
-              name: ibm-automation-processminings
-              catalog:
-                displayName: IBM ProcessMining Operators
-                publisher: IBM
-                sourceType: grpc
-                image: icr.io/cpopen/processmining-operator-catalog:1.1.0
-                updateStrategy:
-                  registryPoll:
-                    interval: 45m
-            db2u:
-              name: ibm-db2uoperator-catalog
-              catalog:
-                displayName: IBM Db2U Catalog
-                publisher: IBM
-                sourceType: grpc
-                image: icr.io/cpopen/ibm-db2uoperator-catalog@sha256:99f725098b801474ff77e880ca235023452116e4b005e49de613496a1917f719
-                updateStrategy:
-                  registryPoll:
-                    interval: 45m
   syncPolicy:
     automated:
       prune: true
       selfHeal: true
-  
-  
   
